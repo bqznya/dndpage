@@ -1,0 +1,496 @@
+.character-detail {
+  max-width: 1400px;
+  margin: 5px auto;
+  text-align: left;
+  color: #ddd;
+}
+
+.character-container {
+  display: flex;
+  align-items: stretch; /* Выравниваем по высоте */
+  gap: 40px;
+}
+
+/* Стили для изображения персонажа */
+.character-image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.character-image img {
+  min-width:440px;
+  width: 100%;
+  max-height:770px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+  background-size:contain;
+}
+
+/* Квадратики для брони и здоровья */
+.stats-overlay {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width:40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.stat-box {
+  background:rgba(15, 16, 12, 0.65);
+  color: #fff;
+  padding: 0px 16px 4px 9px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 5px;
+  line-height:140%;
+}
+
+.stat-box:hover{
+	border-radius:0px;
+}
+
+.stat-box.level {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size:49px;
+  text-align:center;
+  align-content:center;
+  align-items:center;
+  font-weight:bold;
+  color:#fff;
+  opacity:1;
+}
+
+.stat-box.level{
+  width:40px;
+  border-radius:27px 27px 55px 55px;
+  padding:0px 9px 7px 9px;
+  border:1px solid gold;
+}
+.stat-box.level:hover{
+    background:rgba(0, 0, 0, 0.95);
+}
+
+.stat-box.armor {
+  height:50px;
+  text-align:center;
+  align-content:center;
+  width:20px;
+  font-size:35px;
+  background-color: #555555;
+  opacity:1;
+  border:1px solid #000;
+}
+.stat-box.armor:hover{
+	border:1px solid #777;
+}
+
+.stat-box.health {
+   height:50px;
+  text-align:center;
+  align-content:center;
+  width:20px;
+  font-size:35px;
+  padding:0px 16px 4px 9px;
+  background-color: red;
+  opacity:1;
+  border:1px solid #444;
+}
+.stat-box.health:hover{
+	border:1px solid #777;
+}
+/* Блок характеристик */
+.character-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 0px;
+  justify-content:space-between;
+  max-height:770px;
+  
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.stat .value,.name{
+  background-color: #B4031F;
+  color: #e0e0e0;
+}
+
+.stat .value {
+  font-size: 30px;
+  width: 70px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+
+.stat .name {
+  font-size: 30px;
+  padding: 22.5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+/* Информация о персонаже */
+.character-info {
+  flex: 1;
+  text-align: right;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.character-info h1, 
+.character-info h2 {
+  text-align: center; /* Центрируем Имя, Расу и Класс */
+}
+
+.character-info p {
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: justify; /* Выравнивание по ширине */
+}
+
+/* Кнопки */
+.action-button, .delete-button, .copy-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+/*РЕДАКТИРОВАТЬ*/
+.action-button {
+  background-color: #e02041;
+  color: #FFF;
+}
+
+.action-button:hover {
+  background-color: #c01838;
+}
+/*УДАЛИТЬ*/
+.delete-button {
+  background-color: #ff5555;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+/*КОПИРОВАТЬ В БУФЕР*/
+.copy-button {
+  background-color: #ff5555;
+  color: #fff;
+}
+
+.copy-button:hover {
+  background-color: #cc0000;
+}
+
+/* Поле Заметок */
+.character-notes {
+  margin-top: 30px;
+  font-family: "Cormorant Unicase", serif;
+}
+
+.character-notes h3 {
+  font-size: 24px;
+  color: #e02041;
+}
+
+.character-notes textarea {
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  border: none;
+  font-family:"Cormorant Unicase", serif
+}
+
+/* Стили для формы редактирования */
+.edit-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.edit-form input[type="file"] {
+  background-color: #333;
+  color: #fff;
+}
+
+.edit-form button {
+  background-color: #e02041;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.edit-form button:hover {
+  background-color: #c01838;
+}
+
+.edit-form button.cancel {
+  background-color: #ff5555;
+  color: #fff;
+}
+
+.edit-form button.cancel:hover {
+  background-color: #cc0000;
+}
+
+.character-not-found {
+  text-align: center;
+  margin: 50px auto;
+  padding-top: 20px;
+  padding-bottom:20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 1200px;
+}
+.character-not-found nav-button{
+	padding-bottom:20px;
+}
+.not-found-image {
+  width: 100%;
+  height:auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+	  .character-detail {
+    max-width: 100%;
+    padding: 0 15px;
+    overflow-x: hidden;
+  }
+	
+  .character-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+.character-info{
+	padding: 0px 12px 3px 6px;
+}
+
+  .character-image {
+    max-width: 100%;
+    min-width: unset;
+	    position: relative;
+    margin: 0 20px; /* Добавляем отступы по бокам */
+  }
+
+  .character-image img {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .stats-overlay {
+    top: 10px;
+    right: 10px;
+  }
+
+  .stat-box {
+    padding: 0px 12px 3px 6px;
+    font-size: 16px;
+  }
+
+  .stat-box.level {
+    left: 10px !important;
+    top: 10px !important;
+    font-size: 32px !important;
+    width: 35px !important;
+    height: 45px !important;
+    padding: 0 8px 5px 8px !important;
+  }
+
+  .character-stats {
+    max-height: unset;
+    gap: 15px;
+	padding: 0 15px; /* Добавляем боковые отступы */
+    max-width: 90%; /* Ограничиваем ширину */
+  }
+
+.stat {
+    margin: 5px 0; /* Увеличиваем промежуток между характеристиками */
+  }
+
+  .stat .value,
+  .stat .name {
+    font-size: 20px;
+    height: 60px;
+  }
+  
+  .stat .value {
+    font-size: 24px !important;
+    height: 60px;
+    width: 60px;
+  }
+
+  .stat .name {
+    font-size: 18px !important; /* Уменьшаем размер названия */
+    padding: 0 0 0 0 !important; /* Уменьшаем высоту блока */
+    height: 60px; /* Фиксируем высоту */
+  }
+  
+    .stat-box.level {
+    left: 15px !important;
+    top: 15px !important;
+    font-size: 32px !important;
+    width: 35px !important;
+  }
+
+  .stats-overlay {
+    right: 15px !important;
+    top: 15px !important;
+  }
+
+  .stat-box.armor,
+  .stat-box.health {
+    width: 35px !important;
+    height: 40px !important;
+    font-size: 24px !important;
+    padding: 0 10px 2px 5px !important;
+  }
+
+  .character-info p {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .edit-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .edit-form input,
+  .edit-form textarea,
+  .edit-form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .character-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-button, 
+  .delete-button, 
+  .copy-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .character-notes textarea {
+    height: 150px;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+ .character-stats {
+    padding: 0 10px;
+    max-width: 95%;
+  }
+  .stat-box {
+    font-size: 14px;
+    padding: 0px 10px 2px 5px;
+  }
+
+  .stat-box.level {
+    font-size: 28px;
+  }
+
+  .stat .value,
+  .stat .name {
+    font-size: 18px;
+    height: 50px;
+	    margin: 0 5px;
+		/* Добавляем небольшие отступы между цифрой и названием */
+  }
+
+ .stat .value {
+    font-size: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .stat .name {
+    padding: 0 0 0 0 !important;
+    height: 50px !important;
+  }
+
+  .stat-box.level {
+    left: 10px !important;
+    top: 10px !important;
+    font-size: 28px !important;
+  }
+
+  .stats-overlay {
+    right: 10px !important;
+    top: 10px !important;
+  }
+
+  .character-info h1 {
+    font-size: 24px;
+  }
+
+  .character-info h2 {
+    font-size: 18px;
+  }
+}

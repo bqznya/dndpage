@@ -1,0 +1,60 @@
+.header {
+    font-family: "Cormorant Unicase", serif;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.wtf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 5rem;
+    gap: 15px;
+}
+
+.head-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #f2f5f7;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.head-link:hover {
+    background-color: red;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .wtf {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .head-link {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+        width: 100%;
+    }
+
+    .head-link:hover {
+        text-transform: none;
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+}
+
+@media (max-width: 480px) {
+    .head-link {
+        font-size: 1rem;
+        white-space: normal;
+        line-height: 1.2;
+    }
+}

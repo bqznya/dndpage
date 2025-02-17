@@ -1,0 +1,51 @@
+.character-create {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.character-create h1 {
+  font-size: 24px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.create-form input,
+.create-form textarea,
+.create-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.photo{
+	align-items:left;
+	text-align:left;
+	padding:0px;
+}
+.create-form input[type="file"] {
+  background-color: #333;
+  color: #fff;
+}
+
+.create-form button {
+  background-color: #e02041;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.create-form button:hover {
+  background-color: #c01838;
+}
+
+.create-form textarea {
+  height: 100px;
+}
