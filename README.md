@@ -6,8 +6,8 @@
 
 ### 1️⃣ Склонировать репозиторий
 ```sh
-git clone https://github.com/ТВОЙ-ЮЗЕРНЕЙМ/ТВОЙ-РЕПОЗИТОРИЙ.git
-cd ТВОЙ-РЕПОЗИТОРИЙ
+git clone https://github.com/bqznya/dndpage.git
+cd dndpage
 ```
 
 ### 2️⃣ Установка зависимостей и запуск фронтенда
@@ -45,8 +45,8 @@ This project includes both frontend and backend for the DnD application.
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-cd YOUR-REPOSITORY
+git clone https://github.com/bqznya/dndpage.git
+cd dndpage
 ```
 
 ### 2️⃣ Install dependencies and run the frontend
