@@ -272,25 +272,4 @@
     "level": "4",
     "image": "/uploads/1739581406472.jpg"
   },
-  {
-    "id": 1739727280450,
-    "name": "Адольф Гитлер",
-    "race": "Гном",
-    "class": "Первый",
-    "armor": "9мм",
-    "health": "Как у Быка",
-    "strength": "Величавая",
-    "dexterity": "Достаточно",
-    "endurance": "Придумай сам мне похуй",
-    "wisdom": "Народная",
-    "intelligence": "ИИ",
-    "charisma": "MAX()",
-    "backstory": "Бля",
-    "features": "Усики - пропуск в трусики",
-    "equipment": "Арийский Лагер",
-    "spells": "Файрбол\r\nГазовая атака\r\nРасстрел\r\n",
-    "notes": "Uber Alle's",
-    "level": "1488",
-    "image": "/uploads/1739727779036.jpg"
-  }
 ]
