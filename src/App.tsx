@@ -1,8 +1,6 @@
 // src/App.tsx
 import React, { useEffect, useState } from 'react';
 import { fetchItems, addItem, deleteItem } from './services/api';
-import { Item } from './types/item';
-import ItemList from './components/ItemList';
 // src/App.tsx
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
