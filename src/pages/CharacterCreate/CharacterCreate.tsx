@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createCharacter } from '../../services/api.ts'; // Путь к API
+import { createCharacter } from '../../services/api.ts';
 import './CharacterCreate.css';
 
 // Интерфейс персонажа
@@ -86,8 +86,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     formData.append("equipment", character.equipment);
     formData.append("spells", character.spells);
     formData.append("notes", character.notes);
-    formData.append("level", character.level);
-    
+    formData.append("level", character.level);    
     if (imageFile) { // ✅ Проверяем, есть ли файл
       formData.append("image", imageFile);
     }
@@ -107,15 +106,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 };
 const [imageFile, setImageFile] = useState<File | null>(null);
 
-
-
   return (
     <div className="character-create">
       <h1>Создание нового персонажа</h1>
       <form onSubmit={handleSubmit} className="create-form">
-        <p className="photo">
-          Фото персонажа <input type="file" name="image" accept="image/*" onChange={handleImageChange} />
-        </p>
+        <p className="photo">Фото персонажа <input type="file" name="image" accept="image/*" onChange={handleImageChange} /></p>
         <input type="text" name="name" placeholder="Имя персонажа" required onChange={handleChange} />
         <input type="text" name="race" placeholder="Раса" required onChange={handleChange} />
         <input type="text" name="class" placeholder="Класс" required onChange={handleChange} />
