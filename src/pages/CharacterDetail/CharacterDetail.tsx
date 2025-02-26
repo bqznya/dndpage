@@ -133,19 +133,29 @@ const handleSave = async () => {
 
   // Если персонаж не найден
   if (!character) return (
-    <div className="character-not-found">
-      <img src="/notfound.png" alt="Not Found" className="not-found-image" />
-      <h2>Такого персонажа ещё нет, хотите создать?</h2>
-      <button onClick={() => navigate('/create')} className="nav-button">
-        Создать Персонажа
-      </button>
-    </div>
+	<div className="character-not-found">
+	  <img 
+		src="/notfound.png" 
+		alt="Not Found" 
+		className="not-found-image" 
+	  />
+	  <div className="character-not-found-content">
+		<h2>Такого персонажа ещё нет, хотите создать?</h2>
+		<button 
+		  onClick={() => navigate('/create')} 
+		  className="nav-button"
+		>
+		  Создать Персонажа
+		</button>
+	  </div>
+	</div>
   );
 
   return (
     <div className="character-detail">
       {isEditing ? (
         <form className="edit-form" onSubmit={(e) => { e.preventDefault(); handleSave(); }}>
+
           <label htmlFor="name">Имя персонажа:</label>
           <input type="text" name="name" placeholder="Имя персонажа" value={character.name} onChange={handleChange} required />
 
@@ -164,10 +174,8 @@ const handleSave = async () => {
           <label htmlFor="health">Здоровье:</label>
           <input type="text" name="health" placeholder="Здоровье" value={character.health} onChange={handleChange} required />
 
-
           <label htmlFor="level">Уровень:</label>
           <input type="text" name="level" placeholder="Уровень" value={character.level} onChange={handleChange} required />
-
 
           <label htmlFor="strength">Сила:</label>
           <input type="text" name="strength" placeholder="Сила" value={character.strength} onChange={handleChange} required />
