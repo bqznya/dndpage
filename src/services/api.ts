@@ -17,7 +17,7 @@ export const createCharacterr = async (formData: FormData) => {
   try {
     const response = await fetch('${API_URL}/$', {
       method: 'POST',
-      body: formData, // ✅ Отправляем файлы
+      body: formData,
     });
     if (!response.ok) {
       throw new Error(`Ошибка при создании персонажа: ${response.statusText}`);
@@ -47,7 +47,7 @@ export const updateCharacter = async (id: number, formData: FormData) => {
   try {
     const response = await axios.put(`${API_URL}/${id}`, formData, {
       headers: { 
-        "Content-Type": "multipart/form-data" // Важно для файлов
+        "Content-Type": "multipart/form-data"
       }
     });
     return response.data;
@@ -62,9 +62,9 @@ export const deleteCharacter = async (id: string) => {
   try {
     const response = await axios.delete(`${API_URL}/${id}`);
     console.log('Удалено:', response.data);
-    return response.data; // ✅ Возвращаем данные, чтобы клиент мог обработать
+    return response.data; 
   } catch (error) {
     console.error('Ошибка при удалении персонажа:', error);
-    throw error; // Пробрасываем ошибку, чтобы её обработать в UI
+    throw error; 
   }
 };
