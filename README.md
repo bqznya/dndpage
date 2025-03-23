@@ -1,6 +1,7 @@
 # DnD Project
 
-Этот проект включает в себя фронтенд и бэкенд для приложения DnD.
+Этот проект включает в себя фронтенд и бэкенд для DnD.
+Можно создавать персонажей и просматривать, а также редактировать и удалять
 ![image](https://github.com/user-attachments/assets/61469482-4b7f-4bfc-9c62-9c36631f8416)
 ![image](https://github.com/user-attachments/assets/8985f6b1-629f-4ad0-8d2a-fbd1770ccd3b)
 
